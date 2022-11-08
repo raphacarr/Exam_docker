@@ -28,7 +28,10 @@ Ci-dessous un aperçu du site vitrine attendu.
 
 ![](images/site_vitrine.jpeg)
 
-**NB :** L’image** créée devra permettre de lancer un container permettant d’héberger ce site web et ayant les liens adéquats permettant d’accéder à nos applications internes 
+---
+**NB :** L’image créée devra permettre de lancer un container permettant d’héberger ce site web et ayant les liens adéquats permettant d’accéder à nos applications internes 
+
+---
 
 
 ## 1) Conteneurisation de l’application web (6 Points)
@@ -79,7 +82,7 @@ Ci-dessous un exemple de description des qualifications souhaitées pour un post
 ![](images/offre_emploi.jpeg)
 
 ---
-Bien vouloir preter attention aux qualités encadrées en jaune ci-dessus, afin de prendre conscience **que maîtriser les technologies ne suffit pas**. Il faut en plus de celà, avoir un esprit très créatif, de très bonnes capacités redactionnelles pour rediger vos différents rapports et également des qualités de pédagogue qui vous aideront à parfaire les explications de vos actions afin de faciliter leur compréhension. 
+**N.B**: Bien vouloir preter attention aux qualités encadrées en jaune ci-dessus, afin de prendre conscience **que maîtriser les technologies ne suffit pas**. Il faut en plus de celà, avoir un esprit très créatif, de très bonnes capacités redactionnelles pour rediger vos différents rapports et également des qualités de pédagogue qui vous aideront à parfaire les explications de vos actions afin de faciliter leur compréhension. 
 
 ---
 
