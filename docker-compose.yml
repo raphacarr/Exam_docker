@@ -1,0 +1,68 @@
+version: '3.3'
+
+services:
+  ic-webapp:
+    image: ic-webapp:1.0
+    container_name: ic-webapp
+    build:
+      context: .
+    environment:
+      - ODOO_URL=https://www.odoo.com/fr_FR/web/login
+      - PGADMIN_URL=http://192.168.99.10:5055/login?next=%2F
+    depends_on:
+      - postgres
+    networks:
+      - net-webapp
+    ports:
+      - 8080:8080
+    # command: python3 app.py
+    restart: unless-stopped
+
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=QWERTY!
+    volumes:
+      - v_postgres:/data/postgres
+    ports:
+      - 5432:5432
+    networks:
+      - net-webapp
+    restart: unless-stopped
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    ports:
+      - 5055:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=abc@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=AZERY!
+    networks:
+      - net-webapp
+    depends_on:
+      - postgres
+    restart: unless-stopped
+  
+  odoo:
+    image: odoo
+    container_name: odoo
+    ports: 
+      - 8069:8069
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=QWERTY!
+    depends_on:
+      - postgres
+    networks:
+      - net-webapp
+    restart: unless-stopped
+
+networks:
+  net-webapp:
+    driver: bridge
+
+volumes:
+  v_postgres:
